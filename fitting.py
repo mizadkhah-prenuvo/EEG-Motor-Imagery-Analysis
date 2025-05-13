@@ -9,6 +9,7 @@ from torch import optim
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from copy import deepcopy
+from glob import glob
 
 def accuracy(out, yb):
     preds = torch.argmax(out, dim=1)

@@ -21,6 +21,7 @@ class Lambda(nn.Module):
 def myreshape(xb):
     return xb.view(-1,xb.shape[1]*xb.shape[3])
 
+# boooooooooooooooooooooooooooooooooooo
 
 # constrained blocks are required for implementing of EEGNet and ShallowConvNet
 class Conv2dConstrained(nn.Conv2d):
