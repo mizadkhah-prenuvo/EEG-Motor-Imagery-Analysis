@@ -11,6 +11,8 @@ from torch.utils.data import DataLoader
 from copy import deepcopy
 from glob import glob
 
+
+# metrics
 def accuracy(out, yb):
     preds = torch.argmax(out, dim=1)
     return (preds == yb).float().mean()
