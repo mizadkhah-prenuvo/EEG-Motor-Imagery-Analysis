@@ -9,13 +9,17 @@ from torch import optim
 from torch.utils.data import TensorDataset
 from torch.utils.data import DataLoader
 from copy import deepcopy
-from glob import glob
+from sklearn.metrics import f1_score
 
 
 # metrics
 def accuracy(out, yb):
     preds = torch.argmax(out, dim=1)
     return (preds == yb).float().mean()
+
+def f1_score(out, yb):
+    preds = torch.argmax(out, dim=1)
+    return f1_score(preds, yb)
 
 def update (model, opt, loss_func, xb, yb):
     '''
